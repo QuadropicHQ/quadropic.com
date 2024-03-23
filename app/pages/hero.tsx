@@ -11,7 +11,7 @@ export function HeroPage() {
 
   return (
     <AuroraBackground>
-      <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Quadropic
       </h1>
       <motion.div
@@ -24,7 +24,10 @@ export function HeroPage() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <TextGenerateEffect words={words} />
+        <TextGenerateEffect
+          words={words}
+          className="text-center text-6xl md:text-7xl"
+        />
 
         <Button
           borderRadius="1.75rem"

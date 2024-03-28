@@ -18,8 +18,17 @@ const config: Config = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        "radar-spin": "radar-spin 10s linear infinite",
       },
       keyframes: {
+        "radar-spin": {
+          from: {
+            transform: "rotate(20deg)",
+          },
+          to: {
+            transform: "rotate(380deg)",
+          },
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",

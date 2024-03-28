@@ -24,7 +24,7 @@ export function B2BservicesSection() {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-30">
-            Want custom solutions for your business?
+            Want custom solutions for your Business or Organisation?
           </h1>
 
           <p className="font-normal text-base text-slate-500 mb-4 relative z-30">

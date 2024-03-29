@@ -1,6 +1,6 @@
 "use client";
 
-export default () => {
+export function Footer() {
   return (
     <footer className="text-gray-500 bg-black px-4 py-5 max-w-screen-xl mx-auto md:px-8 dark:text-gray-400">
       <div className="max-w-lg sm:mx-auto text-center self-center">
@@ -44,4 +44,4 @@ export default () => {
       `}</style>
     </footer>
   );
-};
+}

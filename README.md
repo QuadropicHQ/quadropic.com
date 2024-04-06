@@ -1,6 +1,3 @@
-Certainly! Below is the updated README.md file for the Quadropic website, including instructions on setting up the project locally, contributing, support information, license details, and the build status badge.
-
-```markdown
 # Quadropic
 
 Welcome to Quadropic - your go-to destination for innovative tech solutions!
@@ -71,6 +68,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 *© 2024 Quadropic. All rights reserved.*
-```
 
-This README.md file provides comprehensive information about the Quadropic project, including instructions for setting up the project locally, contributing guidelines, support contact information, license details, and the build status badge.
+You can copy and paste this entire block of code into your README.md file.

@@ -30,7 +30,7 @@ export function Footer() {
         </p>
       </div>
       <div className="mt-8 text-sm text-center">
-        Made in India 🇮🇳 | Built for the Globe 🌏
+        Made in India & Built for the Globe
       </div>
       <div className="mt-8 text-sm text-center">
         quadropic.com | &copy; QuadropicHQ 2024

@@ -1,4 +1,6 @@
 "use client";
+import IndiaLogo from "./logo/india.logo";
+import { IoMdGlobe } from "react-icons/io";
 
 export function Footer() {
   return (
@@ -29,8 +31,11 @@ export function Footer() {
           pushing the boundaries of artificial intelligence and other fields.
         </p>
       </div>
-      <div className="mt-8 text-sm text-center">
-        Made in India & Built for the Globe
+      <div className="mt-8 grid grid-row-4 grid-flow-col gap-1.5">
+        <div className="text-sm text-right">Made in India</div>
+        <IndiaLogo />
+        <div className="text-sm text-right">Built for the Globe</div>
+        <IoMdGlobe className="w-6 h-6" />
       </div>
       <div className="mt-8 text-sm text-center">
         quadropic.com | &copy; QuadropicHQ 2024

@@ -1,6 +1,6 @@
 # quadropic.com
 
-Welcome to Quadropic - your go-to destination for innovative tech solutions!
+![alt text](template.png "quadropic.com GitHub Banner")
 
 ## About Quadropic
 
@@ -71,4 +71,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-_© 2024 Quadropic. All rights reserved._
+_© 2024 QuadropicHQ_

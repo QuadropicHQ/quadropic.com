@@ -1,10 +1,12 @@
 import { IconContainer } from "../components/ui/iconcontainer";
 import { AiFillDollarCircle } from "react-icons/ai";
-import { BiSolidReport } from "react-icons/bi";
-import { BsClipboardDataFill } from "react-icons/bs";
-import { HiDocumentReport } from "react-icons/hi";
-import { HiMiniDocumentArrowUp } from "react-icons/hi2";
-import { RiFilePaper2Fill } from "react-icons/ri";
+import { IoExtensionPuzzle } from "react-icons/io5";
+import { FaUserLock } from "react-icons/fa";
+import { PiDevicesFill } from "react-icons/pi";
+import { FaPaintBrush } from "react-icons/fa";
+import { MdFamilyRestroom } from "react-icons/md";
+import { IoMdGlobe } from "react-icons/io";
+import { IoSpeedometer } from "react-icons/io5";
 import { Radar } from "../components/ui/radarpage";
 
 export function ValuePage() {
@@ -16,32 +18,39 @@ export function ValuePage() {
       <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
         <div className="mx-auto w-full max-w-3xl">
           <div className="flex w-full  items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
-            <IconContainer text="Web Development" delay={0.2} />
+            <IconContainer
+              text="Extensible"
+              delay={0.2}
+              icon={<IoExtensionPuzzle className=" h-8 w-8 text-slate-600" />}
+            />
             <IconContainer
               delay={0.4}
-              text="Mobile apps"
+              text="Cost Effective"
               icon={<AiFillDollarCircle className=" h-8 w-8 text-slate-600" />}
             />
             <IconContainer
-              text="Designing"
+              text="Best Ecosystem"
               delay={0.3}
-              icon={<BsClipboardDataFill className=" h-8 w-8 text-slate-600" />}
+              icon={<PiDevicesFill className=" h-8 w-8 text-slate-600" />}
             />
           </div>
         </div>
         <div className="mx-auto w-full max-w-md">
           <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
             <IconContainer
-              text="Maintenence"
+              text="Privacy"
               delay={0.5}
-              icon={<BiSolidReport className=" h-8 w-8 text-slate-600" />}
+              icon={<FaUserLock className=" h-8 w-8 text-slate-600" />}
             />
             <IconContainer
-              text="Server management"
-              icon={
-                <HiMiniDocumentArrowUp className=" h-8 w-8 text-slate-600" />
-              }
+              text="Family Safe"
+              icon={<MdFamilyRestroom className=" h-8 w-8 text-slate-600" />}
               delay={0.8}
+            />
+            <IconContainer
+              delay={0.4}
+              text="Shipped across the Globe"
+              icon={<IoMdGlobe className=" h-8 w-8 text-slate-600" />}
             />
           </div>
         </div>
@@ -49,13 +58,13 @@ export function ValuePage() {
           <div className="flex w-full items-center justify-center space-x-10 md:justify-between md:space-x-0 ">
             <IconContainer
               delay={0.6}
-              text="GitHub Integration"
-              icon={<HiDocumentReport className=" h-8 w-8 text-slate-600" />}
+              text="Best in Class UI"
+              icon={<FaPaintBrush className=" h-8 w-8 text-slate-600" />}
             />
             <IconContainer
               delay={0.7}
-              text="CMS Integration"
-              icon={<RiFilePaper2Fill className=" h-8 w-8 text-slate-600" />}
+              text="Native Performance"
+              icon={<IoSpeedometer className=" h-8 w-8 text-slate-600" />}
             />
           </div>
         </div>

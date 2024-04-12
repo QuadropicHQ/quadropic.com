@@ -1,4 +1,4 @@
-# Quadropic
+# quadropic.com
 
 Welcome to Quadropic - your go-to destination for innovative tech solutions!
 
@@ -12,24 +12,28 @@ Quadropic is a dynamic tech startup dedicated to pushing the boundaries of innov
 - **Responsive Design**: Our website is fully responsive, ensuring a seamless experience across all devices.
 - **Github Pages Deployment**: We have deployed our website to Github Pages for easy access, with the domain [quadropic.com](https://quadropic.com).
 
-## Setup and Run Quadropic Locally
+## Setup and Run `quadropic.com` Locally
 
-1. **Clone the Repository**: 
+1. **Clone the Repository**:
+
    ```
    git clone https://github.com/QuadropicHQ/quadropic.com.git
    ```
 
 2. **Navigate to the Project Directory**:
+
    ```
    cd quadropic.com
    ```
 
 3. **Install Dependencies**:
+
    ```
    npm install
    ```
 
 4. **Run the Development Server**:
+
    ```
    npm run dev
    ```
@@ -39,11 +43,11 @@ Quadropic is a dynamic tech startup dedicated to pushing the boundaries of innov
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to Quadropic, here's how you can do it:
+We welcome contributions from the community! If you'd like to contribute to `quadropic.com`, here's how you can do it:
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine.
-3. Create a new branch for your feature/fix: 
+3. Create a new branch for your feature/fix:
    ```
    git checkout -b feature-name
    ```
@@ -59,7 +63,7 @@ We welcome contributions from the community! If you'd like to contribute to Quad
 
 ## Support
 
-If you encounter any issues or have questions, feel free to reach out to us at [contact@quadropic.com](mailto:contact@quadropic.com).
+If you encounter any issues or have questions, feel free to reach out to our [Open Source Team](mailto:quadropichq+opensource@gmail.com).
 
 ## License
 
@@ -67,6 +71,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-*© 2024 Quadropic. All rights reserved.*
-
-You can copy and paste this entire block of code into your README.md file.
+_© 2024 Quadropic. All rights reserved._

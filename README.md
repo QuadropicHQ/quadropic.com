@@ -1,6 +1,6 @@
 # quadropic.com
 
-Welcome to Quadropic - your go-to destination for innovative tech solutions!
+![alt text](template.png "quadropic.com GitHub Banner")
 
 ## About Quadropic
 

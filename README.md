@@ -71,4 +71,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-_© 2024 QuadropicHQ_
+_© 2024 Quadropic HQ_

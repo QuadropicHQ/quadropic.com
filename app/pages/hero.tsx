@@ -2,7 +2,7 @@
 import React from "react";
 import { FlipWords } from "../components/ui/flipwords";
 import { Spotlight } from "../components/ui/spotlight";
-import QuadroBanner from "../components/inhome/quadro-text";
+import QuadroBanner from "../components/inhome/quadrobanner";
 import { Vortex } from "../components/ui/vortex";
 
 export function HeroPage() {

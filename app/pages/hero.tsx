@@ -2,6 +2,7 @@
 import React from "react";
 import { FlipWords } from "../components/ui/flipwords";
 import { Spotlight } from "../components/ui/spotlight";
+import QuadroBanner from "../components/inhome/quadro-text";
 
 export function HeroPage() {
   const words = ["AI", "Media", "Design", "Privacy", "Tech"];
@@ -14,9 +15,7 @@ export function HeroPage() {
           fill="white"
         />
         {/* Title Hero Section */}
-        <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 justify-center items-center px-4">
-          Quadropic
-        </h1>
+        <QuadroBanner />
         {/* Moto Hero Section */}
         <div className="text-3xl font-normal mx-auto text-neutral-600 dark:text-neutral-400">
           24th Avenue of

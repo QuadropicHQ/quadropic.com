@@ -1,22 +1,30 @@
 "use client";
-
-import { motion } from "framer-motion";
 import React from "react";
-import { AuroraBackground } from "../components/ui/aurora-background";
 import { FlipWords } from "../components/ui/flipwords";
+import { Spotlight } from "../components/ui/spotlight";
+import QuadroBanner from "../components/inhome/quadrobanner";
+import { Vortex } from "../components/ui/vortex";
 
 export function HeroPage() {
-  const words = ["AI", "Entertainment", "Design", "Privacy", "Technology"];
+  const words = ["AI", "Media", "Design", "Privacy", "Tech"];
 
   return (
-    <AuroraBackground>
-      <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        Quadropic
-      </h1>
-      <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        The Twenty Fourth Avenue of
-        <FlipWords words={words} /> <br />
+    <div className="h-screen flex items-center justify-center">
+      <div className="w-full max-w-screen-md rounded-md flex md:items-center md:justify-center bg-black/[0.96] flex-col">
+        <Vortex
+          backgroundColor="black"
+          className="flex items-center flex-col justify-center px-2 md:px-10 py-4"
+        />
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
+        />
+        <QuadroBanner />
+        <div className="text-3xl font-normal mx-auto text-neutral-600 dark:text-neutral-400 z-10">
+          24th Avenue of
+          <FlipWords words={words} /> <br />
+        </div>
       </div>
-    </AuroraBackground>
+    </div>
   );
 }

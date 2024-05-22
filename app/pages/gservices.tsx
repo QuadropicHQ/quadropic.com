@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export function GeneralServices() {
   return (
-    <div className="mt-[4rem] mr-[2rem] ml-[2rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="mt-[4rem] mr-[2rem] ml-[2rem] rounded-md flex flex-col antialiased bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h1 className="mb-4 text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Our Products and Services
       </h1>

@@ -12,13 +12,44 @@ export function GServices() {
         Our Products and Services
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Experience the Best
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            Whichever, app from us we try to excel the Standards and provide not
+            just good but the best experience posssible. Weather it be an App or
+            a Service we bet, you'll love it.
+          </p>
+        </WobbleCard>
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
           className=""
         >
           <div className="max-w-xs">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Item 1
+              Syntheo
+            </h2>
+            <p className="mt-4 text-left  text-base/6 text-neutral-200">
+              With over 100,000 monthly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+            </p>
+          </div>
+          <Image
+            src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            width={1260}
+            height={750}
+            alt="linear demo image"
+            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          />
+        </WobbleCard>
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+          className=""
+        >
+          <div className="max-w-xs">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Hashes
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
               With over 100,000 monthly active bot users, Gippity AI is the most
@@ -35,29 +66,13 @@ export function GServices() {
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px]">
           <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Item 2
+            The Beauty of Integrity
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            If someone yells “stop!”, goes limp, or taps out, the fight is over.
+            With making of one the best experiences, we also make sure that we
+            have a seamless Ecosystem and Integrity in our products. We deeply
+            analyse the usage of our apps and try to comply with it.
           </p>
-        </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-          <div className="max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Item 3
-            </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-              With over 100,000 monthly active bot users, Gippity AI is the most
-              popular AI platform for developers.
-            </p>
-          </div>
-          <Image
-            src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            width={1260}
-            height={750}
-            alt="linear demo image"
-            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
-          />
         </WobbleCard>
       </div>
     </div>

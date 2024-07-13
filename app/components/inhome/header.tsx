@@ -1,45 +1,32 @@
 "use client";
-import { IconMenu, IconX } from "@tabler/icons-react";
+
 import { useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
-  const [openNavigation, setOpenNavigation] = useState(false);
-
-  const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-    } else {
-      setOpenNavigation(true);
-    }
-  };
-
-  const handleClick = () => {
-    if (!openNavigation) return;
-
-    setOpenNavigation(false);
-  };
-
-  // Manually filling the navigation items
-  const navigation = [
-    { id: 1, title: "Home", url: "#home", onlyMobile: false },
-    { id: 2, title: "Values", url: "#values", onlyMobile: false },
-    { id: 3, title: "Services", url: "#services", onlyMobile: false },
-    { id: 4, title: "What They Say", url: "#contact", onlyMobile: false },
+  let Links = [
+    { name: "HOME", link: "/" },
+    { name: "SERVICE", link: "/" },
+    { name: "ABOUT", link: "/" },
+    { name: "CONTACT", link: "/" },
   ];
+  let [open, setOpen] = useState(false);
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50  border-b-[0.1px] border-n-6 lg:bg-n-8/90 lg:backdrop-blur-md bg-n-8/90 backdrop-blur-md`}
+    <header
+      className="fixed w-full md:flex items-center justify-between  z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4"
+      style={{ borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)" }}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
+      <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+        {/* Logo  SVG*/}
+        <div className="h-12 w-12">
           <svg
-            className="w-10 h-10 lg:w-20 lg:h-20 lg:p-2"
             width="387"
             height="505"
             viewBox="0 0 387 505"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            height="100%"
           >
             <path
               fill-rule="evenodd"
@@ -48,37 +35,38 @@ const Header = () => {
               fill="white"
             />
           </svg>
-        </a>
-
-        <nav
-          className={`${
-            openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-        >
-          <div className="relative z-2 flex flex-col justify-center m-auto lg:flex-row lg:bg-transparent  bg-black">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${"lg:text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
-            ))}
-          </div>
-        </nav>
-        <button className="ml-auto lg:hidden" onClick={toggleNavigation}>
-          {openNavigation ? (
-            <IconX className="w-6 h-6 text-n-1" />
-          ) : (
-            <IconMenu className="w-6 h-6 text-n-1" />
-          )}
-        </button>
+        </div>
       </div>
-    </div>
+      {/* Menu icon */}
+      <div
+        onClick={() => setOpen(!open)}
+        className="absolute right-6 top-6 cursor-pointer md:hidden w-12 h-12"
+      >
+        {open ? (
+          <AiOutlineClose className="h-9" />
+        ) : (
+          <AiOutlineMenu className="h-9" />
+        )}
+      </div>
+      {/* linke items */}
+      <ul
+        className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          open ? "top-20" : "top-[-490px]"
+        }`}
+      >
+        {Links.map((link) => (
+          <li className="md:ml-8 md:my-0 my-7 font-semibold">
+            <a
+              href={link.link}
+              className="text-gray-800 hover:text-blue-400 duration-500"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+      {/* button */}
+    </header>
   );
 };
 

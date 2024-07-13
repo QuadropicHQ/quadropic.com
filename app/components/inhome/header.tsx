@@ -19,14 +19,15 @@ const Header = () => {
     >
       <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
         {/* Logo  SVG*/}
-        <div className="h-12 w-12">
+        <div className="h-12 w-12 px-2">
           <svg
-            width="387"
-            height="505"
+            // width="387"
+            // height="505"
             viewBox="0 0 387 505"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
+            width="100%"
           >
             <path
               fill-rule="evenodd"

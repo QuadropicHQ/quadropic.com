@@ -21,13 +21,10 @@ const Header = () => {
         {/* Logo  SVG*/}
         <div className="h-12 w-12 px-2">
           <svg
-            // width="387"
-            // height="505"
             viewBox="0 0 387 505"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
-            width="100%"
           >
             <path
               fill-rule="evenodd"
@@ -49,18 +46,16 @@ const Header = () => {
           <AiOutlineMenu className="h-9" />
         )}
       </div>
-      {/* linke items */}
+      {/* link items */}
       <ul
-        className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+        // FIXME: Background Blur Not working
+        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static bg-black bg-opacity-50 backdrop-filter backdrop-blur md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
           open ? "top-20" : "top-[-490px]"
         }`}
       >
         {Links.map((link) => (
           <li className="md:ml-8 md:my-0 my-7 font-semibold">
-            <a
-              href={link.link}
-              className="text-gray-800 hover:text-blue-400 duration-500"
-            >
+            <a href={link.link} className="text-white duration-500">
               {link.name}
             </a>
           </li>

@@ -1,35 +1,23 @@
+import React from "react";
 import { Spotlight } from "../components/ui/spotlight";
-import QuadroBanner from "../components/inhome/quadrobanner";
-import { FlipWords } from "../components/ui/flipwords";
+import { GlobeWidget } from "../components/ui/globe-white";
 
 export function HeroPage() {
-  const words = ["AI", "Media", "Design", "Privacy", "Tech"];
-
   return (
-    <div className="h-screen flex items-center justify-center">
-      <div className="w-full max-w-screen-md rounded-md flex md:items-center md:justify-center bg-black/[0.96] flex-col">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="blue"
-        />
-        <Spotlight
-          className="-top-20 left-0 md:left-40 md:-top-10 sm:left-200 sm:-top-10"
-          fill="lightblue"
-        />
-        <Spotlight
-          className="-top-10 left-0 md:left-20 md:-top-5 sm:left-180 sm:-top-20"
-          fill="darkblue"
-        />
-        <Spotlight
-          className="-top-40 left-0 md:left-80 md:-top-30 sm:left-160 sm:-top-40"
-          fill="white"
-        />
-        <QuadroBanner />
-        <div className="text-3xl font-normal mx-auto text-neutral-600 dark:text-neutral-400 z-10">
-          24th Avenue of
-          <FlipWords words={words} /> <br />
-        </div>
+    <div className="h-screen w-full rounded-md flex items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+        <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          Quadropic
+        </h1>
+        <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          The 24th Avenue of Technology is here
+        </p>
       </div>
+      <GlobeWidget className="absolute bottom-0" />
     </div>
   );
 }

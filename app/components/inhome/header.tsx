@@ -6,9 +6,9 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 const Header = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/" },
-    { name: "ABOUT", link: "/" },
-    { name: "CONTACT", link: "/" },
+    { name: "VALUES", link: "/" },
+    { name: "PRODUCTS", link: "/" },
+    { name: "CONTACT US", link: "/" },
   ];
   let [open, setOpen] = useState(false);
 

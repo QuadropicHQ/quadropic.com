@@ -1,6 +1,4 @@
-import React from "react";
-
-const widelogo = () => {
+export default function smallLogo() {
   return (
     <svg
       width="1908"
@@ -45,6 +43,4 @@ const widelogo = () => {
       </defs>
     </svg>
   );
-};
-
-export default widelogo;
+}

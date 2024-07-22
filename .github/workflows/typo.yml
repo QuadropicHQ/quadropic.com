@@ -7,19 +7,14 @@ on:
     branches: ["main"]
 
 jobs:
-  check:
+  run:
     name: Spell Check with Typos
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Actions Repository
         uses: actions/checkout@v4
 
-      - name: Check spelling of file.txt
+      - name: Check Spelling of All Files
         uses: crate-ci/typos@master
         with:
           files: ./
-
-      - name: Writes changes in the local checkout
-        uses: crate-ci/typos@master
-        with:
-          write_changes: true

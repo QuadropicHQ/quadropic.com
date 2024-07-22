@@ -87,3 +87,7 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
+
+      # Check for TYPOS
+      - name: typos-action
+        uses: crate-ci/typos@v1.23.2

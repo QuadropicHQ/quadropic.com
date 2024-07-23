@@ -1,0 +1,12 @@
+name: Audit Web Performance
+
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Generate Lighthouse Report
+        uses: justinribeiro/lighthouse-action@master
+        with:
+          url: https://quadropic.com
+          wptConnectionSpeed: threegfast

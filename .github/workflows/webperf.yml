@@ -1,5 +1,7 @@
-name: Audit Web Performance
-
+name: Analyse Web Performance
+on:
+  check_run:
+    types: [rerequested, completed]
 jobs:
   perf:
     runs-on: ubuntu-latest

@@ -87,3 +87,10 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
+
+      - name: Check up with SEO Analyzer Using Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - run: npm i -g seo-analyzer
+      - run: seo-analyzer -u https://quadropic.com

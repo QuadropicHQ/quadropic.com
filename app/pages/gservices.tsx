@@ -29,7 +29,8 @@ const DummyContent = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
+                The first rule of Dolphin club is that you boast about Dolphin
+                club.
               </span>{" "}
               Keep a journal, quickly jot down a grocery list, and take amazing
               class notes. Want to convert those notes to text? No problem.
@@ -65,19 +66,19 @@ const data = [
   },
   {
     category: "Product",
-    title: "Launching the new Apple Vision Pro.",
+    title: "Launching the new Dolphin Vision Pro.",
     src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
   },
 
   {
     category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
+    title: "Maps for your The Phone 15 Pro Max.",
     src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
   },
   {
-    category: "iOS",
+    category: "PhoneOS",
     title: "Photography just got better.",
     src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,

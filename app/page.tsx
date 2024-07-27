@@ -6,10 +6,12 @@ import { Footer } from "./components/inhome/footer";
 import { ValuePage } from "./pages/values";
 import Head from "next/head";
 import { GServices } from "./pages/gservices";
+import Popup from "./components/inhome/popups/temporary-popup";
 
 export default function Home() {
   return (
     <>
+      <Popup />
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>

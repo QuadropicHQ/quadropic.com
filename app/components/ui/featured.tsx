@@ -6,11 +6,7 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
-} from "@tabler/icons-react";
+import { FaCircleXmark } from "react-icons/fa6";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
@@ -31,10 +27,40 @@ type Card = {
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
+  onCardHover: (index: number) => void;
+  onCardTouch: (index: number) => void;
+  navigateToIndex: (index: number) => void;
 }>({
   onCardClose: () => {},
   currentIndex: 0,
+  onCardHover: () => {},
+  onCardTouch: () => {},
+  navigateToIndex: () => {},
 });
+
+const CarouselIndicator = ({
+  length,
+  activeIndex,
+}: {
+  length: number;
+  activeIndex: number;
+}) => {
+  const { navigateToIndex } = useContext(CarouselContext);
+
+  return (
+    <div className="flex items-center justify-center gap-2 mt-4">
+      {Array.from({ length }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-2 w-2 rounded-full ${
+            index === activeIndex ? "bg-gray-700 w-8" : "bg-gray-400"
+          } transition-all duration-300 cursor-pointer`}
+          onClick={() => navigateToIndex(index)}
+        />
+      ))}
+    </div>
+  );
+};
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
@@ -48,6 +74,13 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       checkScrollability();
     }
   }, [initialScroll]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      navigateToIndex((currentIndex + 1) % items.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [currentIndex, items.length]);
 
   const checkScrollability = () => {
     if (carouselRef.current) {
@@ -71,9 +104,23 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
+      setCurrentIndex(index);
+    }
+  };
+
+  const handleCardHover = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const handleCardTouch = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const navigateToIndex = (index: number) => {
+    if (carouselRef.current) {
       const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
       const gap = isMobile() ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1);
+      const scrollPosition = (cardWidth + gap) * index;
       carouselRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
@@ -88,7 +135,13 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   return (
     <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose, currentIndex }}
+      value={{
+        onCardClose: handleCardClose,
+        currentIndex,
+        onCardHover: handleCardHover,
+        onCardTouch: handleCardTouch,
+        navigateToIndex,
+      }}
     >
       <div className="relative w-full">
         <div
@@ -98,7 +151,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         >
           <div
             className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+              "absolute z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
             )}
           ></div>
 
@@ -126,12 +179,16 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 }}
                 key={"card" + index}
                 className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                onMouseEnter={() => handleCardHover(index)}
+                onTouchStart={() => handleCardTouch(index)}
+                onClick={() => handleCardTouch(index)}
               >
                 {item}
               </motion.div>
             ))}
           </div>
         </div>
+        <CarouselIndicator length={items.length} activeIndex={currentIndex} />
       </div>
     </CarouselContext.Provider>
   );
@@ -148,7 +205,7 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose, onCardHover, onCardTouch } = useContext(CarouselContext);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -182,7 +239,7 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div className="fixed inset-0 h-70% z-50 overflow-auto">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -201,7 +258,7 @@ export const Card = ({
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                 onClick={handleClose}
               >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <FaCircleXmark className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
@@ -223,6 +280,8 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
+        onMouseEnter={() => onCardHover(index)}
+        onTouchStart={() => onCardTouch(index)}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />

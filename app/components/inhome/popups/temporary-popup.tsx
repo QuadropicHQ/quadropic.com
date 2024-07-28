@@ -16,7 +16,7 @@ const Popup = () => {
   };
 
   const handleContact = () => {
-    window.location.href = "mailto:contact@example.com";
+    window.location.href = "mailto:contact@quadropic.com";
   };
 
   return (

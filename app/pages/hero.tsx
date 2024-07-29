@@ -1,6 +1,7 @@
 import React from "react";
 import { Spotlight } from "../components/ui/spotlight";
 import { GlobeWidget } from "../components/ui/globe-white";
+import AnimButton from "../components/inhome/button/anim_button";
 
 export function HeroPage() {
   return (
@@ -16,6 +17,7 @@ export function HeroPage() {
         <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           The 24th Avenue of Technology is here
         </p>
+        <AnimButton />
       </div>
       <GlobeWidget className="absolute bottom-0" />
     </div>

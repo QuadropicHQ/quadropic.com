@@ -5,7 +5,7 @@ const AnimButton = () => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="items-center justify-center">
+    <div>
       <a
         href="#"
         style={{

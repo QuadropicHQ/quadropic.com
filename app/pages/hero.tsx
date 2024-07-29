@@ -11,13 +11,15 @@ export function HeroPage() {
         fill="white"
       />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+        <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          24th Avenue of Technology
+        </p>
         <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Quadropic
         </h1>
-        <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          The 24th Avenue of Technology is here
-        </p>
-        <AnimButton />
+        <div className="flex lg:justify-around md:justify-around">
+          <AnimButton />
+        </div>
       </div>
       <GlobeWidget className="absolute bottom-0" />
     </div>

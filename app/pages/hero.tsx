@@ -2,6 +2,7 @@ import React from "react";
 import { Spotlight } from "../components/ui/spotlight";
 import { GlobeWidget } from "../components/ui/globe-white";
 import AnimButton from "../components/inhome/button/anim_button";
+import { StarsBackground } from "../components/ui/star-back";
 
 export function HeroPage() {
   return (
@@ -12,7 +13,7 @@ export function HeroPage() {
       />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          24th Avenue of Technology
+          The 4th Dimension
         </p>
         <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Quadropic
@@ -21,6 +22,7 @@ export function HeroPage() {
           <AnimButton />
         </div>
       </div>
+      <StarsBackground />
       <GlobeWidget className="absolute bottom-0" />
     </div>
   );

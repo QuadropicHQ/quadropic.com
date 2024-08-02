@@ -1,5 +1,6 @@
 import React from "react";
 import { Meteors } from "../components/ui/meteorcard";
+import AnimButton from "../components/inhome/button/anim_button";
 
 export function B2BservicesSection() {
   return (
@@ -24,20 +25,18 @@ export function B2BservicesSection() {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-30">
-            Want custom solutions for your Business or Organisation?
+            Want custom solutions for your Business? Try Forces
           </h1>
 
           <p className="font-normal text-base text-slate-500 mb-4 relative z-30">
-            Quadropic&apos;s innovative B2B services are the catalyst your
-            company needs to scale quickly and effectively in an ever-evolving
+            Quadropic&apos;s Forces B2B services are the catalyst your company
+            needs to scale quickly and effectively in an ever-evolving
             technology landscape. With expertise in web development, AI
             integration and more, Quadropic enables your business to stay at the
             forefront of technological advancements.
           </p>
 
-          <button className="px-4 py-2 rounded-xl border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200">
-            Explore B2B Services
-          </button>
+          <AnimButton />
 
           <Meteors number={40} />
         </div>

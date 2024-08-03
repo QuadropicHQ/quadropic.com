@@ -2,11 +2,6 @@
 
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
 
 const Header = () => {
   let Links = [
@@ -49,11 +44,6 @@ const Header = () => {
       <div
         onClick={() => {
           setOpen(!open);
-          if (open) {
-            enableBodyScroll(document.body);
-          } else {
-            disableBodyScroll(document.body);
-          }
         }}
         className="absolute right-6 top-6 cursor-pointer md:hidden w-12 h-12"
       >

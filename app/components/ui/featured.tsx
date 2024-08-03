@@ -48,12 +48,14 @@ const CarouselIndicator = ({
   const { navigateToIndex } = useContext(CarouselContext);
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-4">
+    <div className="flex items-center justify-center gap-2 mt-4 w-fit p-4 bg-white bg-opacity-10 rounded-full mx-auto">
       {Array.from({ length }).map((_, index) => (
         <div
           key={index}
           className={`h-2 w-2 rounded-full ${
-            index === activeIndex ? "bg-gray-700 w-8" : "bg-gray-400"
+            index === activeIndex
+              ? "bg-white opacity-55 w-8"
+              : "bg-white opacity-40"
           } transition-all duration-300 cursor-pointer`}
           onClick={() => navigateToIndex(index)}
         />
@@ -145,7 +147,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     >
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none]"
           ref={carouselRef}
           onScroll={checkScrollability}
         >

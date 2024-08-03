@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const Header = () => {
   let Links = [
@@ -14,10 +19,15 @@ const Header = () => {
 
   return (
     <header
-      className="fixed w-full md:flex items-center justify-between  z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4"
-      style={{ borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)" }}
+      //Desktop and Tablet Menu
+      className={`fixed w-full md:flex items-center justify-between z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4 transition-all duration-500 ease-in ${
+        open ? "h-full" : ""
+      }`}
+      style={{
+        borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)",
+      }}
     >
-      <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+      <div className="font-bold text-2xl cursor-pointer flex items-center gap-1 bg-transparent">
         {/* Logo  SVG*/}
         <div className="h-12 w-12 px-2">
           <svg
@@ -37,7 +47,14 @@ const Header = () => {
       </div>
       {/* Menu icon */}
       <div
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+          if (open) {
+            enableBodyScroll(document.body);
+          } else {
+            disableBodyScroll(document.body);
+          }
+        }}
         className="absolute right-6 top-6 cursor-pointer md:hidden w-12 h-12"
       >
         {open ? (
@@ -48,8 +65,7 @@ const Header = () => {
       </div>
       {/* link items */}
       <ul
-        // FIXME: Background Blur Not working
-        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static bg-black bg-opacity-50 backdrop-filter backdrop-blur md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-in ${
           open ? "top-20" : "top-[-490px]"
         }`}
       >

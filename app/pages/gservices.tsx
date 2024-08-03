@@ -13,6 +13,10 @@ export function GServices() {
       <h1 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         What we Offer
       </h1>
+      <p className="mb-4 mr-2 ml-2 font-normal text-2m text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Make your life easy with our Excellent Apps. From AI to Social Media we
+        got it!
+      </p>
       <Carousel items={cards} />
     </div>
   );

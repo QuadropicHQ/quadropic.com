@@ -14,10 +14,11 @@ const Header = () => {
 
   return (
     <header
+      //Desktop and Tablet Menu
       className="fixed w-full md:flex items-center justify-between  z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4"
       style={{ borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)" }}
     >
-      <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+      <div className="font-bold text-2xl cursor-pointer flex items-center gap-1 bg-transparent">
         {/* Logo  SVG*/}
         <div className="h-12 w-12 px-2">
           <svg
@@ -48,8 +49,7 @@ const Header = () => {
       </div>
       {/* link items */}
       <ul
-        // FIXME: Background Blur Not working
-        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static bg-black bg-opacity-50 backdrop-filter backdrop-blur md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-in ${
           open ? "top-20" : "top-[-490px]"
         }`}
       >

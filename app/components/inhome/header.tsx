@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const Header = () => {
   let Links = [
@@ -15,8 +20,12 @@ const Header = () => {
   return (
     <header
       //Desktop and Tablet Menu
-      className="fixed w-full md:flex items-center justify-between  z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4"
-      style={{ borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)" }}
+      className={`fixed w-full md:flex items-center justify-between z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md py-4 transition-all duration-500 ease-in ${
+        open ? "h-full" : ""
+      }`}
+      style={{
+        borderBottom: "1.5px solid rgba(255, 255, 255, 0.15)",
+      }}
     >
       <div className="font-bold text-2xl cursor-pointer flex items-center gap-1 bg-transparent">
         {/* Logo  SVG*/}
@@ -38,7 +47,14 @@ const Header = () => {
       </div>
       {/* Menu icon */}
       <div
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setOpen(!open);
+          if (open) {
+            enableBodyScroll(document.body);
+          } else {
+            disableBodyScroll(document.body);
+          }
+        }}
         className="absolute right-6 top-6 cursor-pointer md:hidden w-12 h-12"
       >
         {open ? (

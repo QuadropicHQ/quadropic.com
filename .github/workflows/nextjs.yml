@@ -55,8 +55,8 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
+        # with:
+        #   static_site_generator: next
         #   # Automatically inject basePath in your Next.js configuration file and disable
         #   # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
         #   #
@@ -78,8 +78,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      # - name: Syntax Correction
-      #   run: find ./out -type f -exec sed -i 's/\"\//\".\//g' {} +
+      - name: Syntax Correction
+        run: find ./out -type f -exec sed -i 's/\"\//\".\//g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

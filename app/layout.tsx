@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Quadropic",
+  title: "Quadropic -The 4th Dimension",
   description: "Entry to a New Dimension",
 };
 

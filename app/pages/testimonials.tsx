@@ -1,9 +1,8 @@
-import { TextGenerateEffect } from "../components/ui/typingtext";
 import { InfiniteMovingCards } from "../components/ui/infinite-cards";
 
 export function TestimonialsSection() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black/10 dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <h1 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         What our Customers Say
       </h1>

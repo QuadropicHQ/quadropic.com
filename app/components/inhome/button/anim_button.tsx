@@ -7,7 +7,7 @@ const AnimButton = () => {
   return (
     <div>
       <a
-        href="https://forces.quadropic.com"
+        href="mailto:join@quadropic.com"
         style={{
           display: "inline-block",
           color: "#ffffff",
@@ -69,7 +69,7 @@ const AnimButton = () => {
             transition: "transform 0.3s linear",
           }}
         >
-          Explore Forces
+          Join the Vision
         </p>
       </a>
     </div>

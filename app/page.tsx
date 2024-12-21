@@ -1,4 +1,4 @@
-import { B2BservicesSection } from "./pages/b2bservices";
+import { Manifesto } from "./pages/b2bservices";
 import { HeroPage } from "./pages/hero";
 import { TestimonialsSection } from "./pages/testimonials";
 import Header from "./components/inhome/header";
@@ -17,9 +17,9 @@ export default function Home() {
       </Head>
       <Header />
       <HeroPage />
-      <ValuePage />
       <GServices />
-      <B2BservicesSection />
+      <ValuePage />
+      <Manifesto />
       <TestimonialsSection />
       <Footer />
     </>

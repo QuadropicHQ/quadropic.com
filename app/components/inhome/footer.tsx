@@ -2,10 +2,12 @@
 import IndiaLogo from "./logo/india.logo";
 import { IoMdGlobe } from "react-icons/io";
 import { GlobeWidget } from "../ui/globe-white";
+import { StarsBackground } from "../ui/star-back";
 
 export function Footer() {
   return (
     <footer className="relative bg-black min-h-[400px] overflow-hidden">
+            <StarsBackground />
       {/* Globe Background Layer */}
       <div className="absolute inset-0 flex items-start justify-center opacity-100 -mt-[10px]">
         <GlobeWidget className="w-[600px] h-[600px]" />

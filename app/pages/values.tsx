@@ -12,8 +12,8 @@ import { Radar } from "../components/ui/radarpage";
 export function ValuePage() {
   return (
     <div>
-      <h1 className="pt-7 text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        The Values we Adhere to
+      <h1 className=" text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+        Our Values
       </h1>
       <div className="relative flex h-96 w-full flex-col items-center justify-center space-y-4 overflow-hidden px-4">
         <div className="mx-auto w-full max-w-3xl">

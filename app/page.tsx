@@ -1,4 +1,4 @@
-import { B2BservicesSection } from "./pages/b2bservices";
+import { Manifesto } from "./pages/b2bservices";
 import { HeroPage } from "./pages/hero";
 import { TestimonialsSection } from "./pages/testimonials";
 import Header from "./components/inhome/header";
@@ -7,6 +7,7 @@ import { ValuePage } from "./pages/values";
 import Head from "next/head";
 import { GServices } from "./pages/gservices";
 import Popup from "./components/inhome/popups/temporary-popup";
+import Contact from "./pages/contact";
 
 export default function Home() {
   return (
@@ -17,10 +18,11 @@ export default function Home() {
       </Head>
       <Header />
       <HeroPage />
-      <ValuePage />
       <GServices />
-      <B2BservicesSection />
+      <ValuePage />
+      <Manifesto />
       <TestimonialsSection />
+      <Contact/>
       <Footer />
     </>
   );

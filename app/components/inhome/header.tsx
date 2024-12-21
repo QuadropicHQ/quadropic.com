@@ -6,10 +6,11 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header = () => {
   let Links = [
-    { name: "HOME", link: "/" },
-    { name: "VALUES", link: "/" },
-    { name: "PRODUCTS", link: "/" },
-    { name: "CONTACT US", link: "/" },
+    { name: "Syntheo", link: "/" },
+    { name: "Values", link: "/" },
+    { name: "Vision", link: "/" },
+    { name: "Testimonials", link: "/" },
+    { name: "Contact", link: "/" },
   ];
   let [open, setOpen] = useState(false);
 

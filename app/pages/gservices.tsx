@@ -58,37 +58,37 @@ const data = [
   {
     category: "Quickly overview the Code base",
     title: "RepoVision",
-    src: "https://i.postimg.cc/90JhWFBv/Repo-Vision.png",
+    src: "https://i.postimg.cc/ZK2F5k5Q/Repo-Vision.webp",
     content: <DummyContent />,
   },
   {
     category: "Make Fast Ship Fast",
     title: "Fast & Ready",
-    src: "https://i.postimg.cc/zGMqbv1N/Fast.png",
+    src: "https://i.postimg.cc/j5c4xLD6/Fast.webp",
     content: <DummyContent />,
   },
   {
     title: "Hybrid Cloud",
     category: "Power of the cloud, with Local Flexibility",
-    src: "https://i.postimg.cc/26dYKxLj/Hybrid-Cloud.png",
+    src: "https://i.postimg.cc/3rLFz05Y/Hybrid-Cloud.webp",
     content: <DummyContent />,
   },
   {
     title: "Fix Bugs",
     category: "Find & Fix Bugs in a moment",
-    src: "https://i.postimg.cc/jj7tzTs7/FixBugs.png",
+    src: "https://i.postimg.cc/j2k6fmQL/FixBugs.webp",
     content: <DummyContent />,
   },
   {
     title: "Make Apps",
     category: "Make Apps or add features, in a snap",
-    src: "https://i.postimg.cc/tJXbQVF3/MakeApps.png",
+    src: "https://i.postimg.cc/HnL4VdMq/MakeApps.webp",
     content: <DummyContent />,
   },
   {
     category: "Made using the trusted LLM Providers",
     title: "Powered by LLM",
-    src: "https://i.postimg.cc/cHGZhzH5/LLM.png",
+    src: "https://i.postimg.cc/sDv4zfsS/LLM.webp",
     content: <DummyContent />,
   },
 ];

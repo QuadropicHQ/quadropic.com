@@ -11,11 +11,10 @@ export function GServices() {
   return (
     <div className="w-full h-full py-20">
       <h1 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        What we Offer
+        Explore Syntheo
       </h1>
       <p className="mb-4 mr-2 ml-2 font-normal text-2m text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        Make your life easy with our Excellent Apps. From AI to Social Media we
-        got it!
+        See what Syntheo can do for you.
       </p>
       <Carousel items={cards} />
     </div>
@@ -57,40 +56,39 @@ const DummyContent = () => {
 
 const data = [
   {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Quickly overview the Code base",
+    title: "RepoVision",
+    src: "https://i.postimg.cc/90JhWFBv/Repo-Vision.png",
     content: <DummyContent />,
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Make Fast Ship Fast",
+    title: "Fast & Ready",
+    src: "https://i.postimg.cc/zGMqbv1N/Fast.png",
     content: <DummyContent />,
   },
   {
-    category: "Product",
-    title: "Launching the new Dolphin Vision Pro.",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
-  },
-
-  {
-    category: "Product",
-    title: "Maps for your The Phone 15 Pro Max.",
-    src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Hybrid Cloud",
+    category: "Power of the cloud, with Local Flexibility",
+    src: "https://i.postimg.cc/26dYKxLj/Hybrid-Cloud.png",
     content: <DummyContent />,
   },
   {
-    category: "PhoneOS",
-    title: "Photography just got better.",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Fix Bugs",
+    category: "Find & Fix Bugs in a moment",
+    src: "https://i.postimg.cc/jj7tzTs7/FixBugs.png",
     content: <DummyContent />,
   },
   {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Make Apps",
+    category: "Make Apps or add features, in a snap",
+    src: "https://i.postimg.cc/tJXbQVF3/MakeApps.png",
+    content: <DummyContent />,
+  },
+  {
+    category: "Made using the trusted LLM Providers",
+    title: "Powered by LLM",
+    src: "https://i.postimg.cc/cHGZhzH5/LLM.png",
     content: <DummyContent />,
   },
 ];

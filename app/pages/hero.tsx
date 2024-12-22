@@ -24,7 +24,7 @@ export function HeroPage() {
         </p>
         <Image
           src="https://i.ibb.co/nfpSBmb/syntheo-trailer-new-web.png"
-          alt="Macbook mockup from Aceternity UI"
+          alt="Sytheo Trailer for Web"
           width="500"
           height="300"
           className="w-[90%] sm:w-[100%] md:w-[85%] lg:w-[55%] h-auto mt-8 mx-auto"

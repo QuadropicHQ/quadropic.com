@@ -292,7 +292,7 @@ export const Card = ({
 
         {/* Image layer */}
         <div className="w-full h-full">
-        <div className="absolute inset-0 z-20 aspect-square sm:p-10 lg:p-[80px] md:p-[80px]">
+        <div className="absolute inset-0 z-20 aspect-square p-10 lg:p-[80px] md:p-[80px]">
           <BlurImage
             src={card.src}
             alt={card.title}

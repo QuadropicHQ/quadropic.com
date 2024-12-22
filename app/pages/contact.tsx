@@ -200,7 +200,7 @@ export default function Contact() {
                                         className="hover:-translate-y-1 hover:opacity-80 transition-all"
                                     />
                                     <SocialIcon 
-                                        url="https://instagram.com/quadropic"
+                                        url="https://x.com/quadropic"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ height: 35, width: 35 }}
@@ -209,7 +209,7 @@ export default function Contact() {
                                         className="hover:-translate-y-1 hover:opacity-80 transition-all"
                                     />
                                     <SocialIcon 
-                                        url="https://x.com/quadropic"
+                                        url="https://quadropic.medium.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ height: 35, width: 35 }}

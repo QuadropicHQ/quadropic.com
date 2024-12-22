@@ -181,7 +181,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl relative before:absolute before:inset-0 before:rounded-3xl before:border before:border-transparent before:bg-gradient-to-b before:from-white/30 before:to-transparent before:pointer-events-none"
+                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
                 onMouseEnter={() => handleCardHover(index)}
                 onTouchStart={() => handleCardTouch(index)}
                 onClick={() => handleCardTouch(index)}
@@ -292,7 +292,7 @@ export const Card = ({
 
         {/* Image layer */}
         <div className="w-full h-full">
-        <div className="absolute inset-0 z-20 aspect-square p-10">
+        <div className="absolute inset-0 z-20 aspect-square sm:p-10 lg:p-[80px] md:p-[80px]">
           <BlurImage
             src={card.src}
             alt={card.title}

@@ -23,7 +23,7 @@ export function HeroPage() {
           The Next Gen Coding Agent
         </p>
         <Image
-          src="https://i.ibb.co/nfpSBmb/syntheo-trailer-new-web.png"
+          src="https://i.postimg.cc/DzfJP5jh/syntheo-quadropiccomtrailer-image.png"
           alt="Sytheo Trailer for Web"
           width="500"
           height="300"

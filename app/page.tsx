@@ -18,11 +18,21 @@ export default function Home() {
       </Head>
       <Header />
       <HeroPage />
-      <GServices />
-      <ValuePage />
-      <Manifesto />
-      <TestimonialsSection />
-      <Contact/>
+      <section id="syntheo">
+        <GServices />
+      </section>
+      <section id="values">
+        <ValuePage />
+      </section>
+      <section id="vision">
+        <Manifesto />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Footer />
     </>
   );

@@ -63,7 +63,7 @@ const Header = () => {
       {/* link items */}
       <ul
         className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 pr-9 transition-opacity duration-3000 ease-in-out ${
-          open ? "top-20 opacity-100" : "top-[-490px] opacity-0"
+          open ? "top-20 opacity-100" : "top-[-490px]"
         }`}
       >
         {Links.map((link) => (

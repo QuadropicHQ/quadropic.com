@@ -62,15 +62,22 @@ const Header = () => {
       </div>
       {/* link items */}
       <ul
-        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 pr-9 transition-all duration-500 ease-in ${
-          open ? "top-20" : "top-[-490px]"
+        className={`md:flex z-50 md:items-center md:pb-0 pb-12 absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 pr-9 transition-opacity duration-3000 ease-in-out ${
+          open ? "top-20 opacity-100" : "top-[-490px] opacity-0"
         }`}
       >
         {Links.map((link) => (
           <li className="md:ml-8 md:my-0 my-7 font-semibold">
-            <a href={link.link} className="text-white duration-500">
-              {link.name}
-            </a>
+        <a
+          href={link.link}
+          className="text-white duration-500"
+          onClick={() => {
+            setOpen(false);
+            enableBodyScroll(document.body);
+          }}
+        >
+          {link.name}
+        </a>
           </li>
         ))}
       </ul>

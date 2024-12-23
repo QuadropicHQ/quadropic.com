@@ -6,12 +6,13 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import { FaCircleXmark } from "react-icons/fa6";
+import { FaCircleXmark, FaX } from "react-icons/fa6";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { StarsBackground } from "./star-back";
+import { IconX } from "@tabler/icons-react";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -258,10 +259,10 @@ export const Card = ({
               className="max-w-5xl mx-auto bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
             >
               <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black  rounded-full flex items-center justify-center"
+                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-white/20  rounded-full flex items-center justify-center"
                 onClick={handleClose}
               >
-                <FaCircleXmark className="h-6 w-6 text-neutral-900" />
+                <IconX className="h-6 w-6 text-white/20" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}

@@ -2,7 +2,7 @@ import React from "react";
 import { Spotlight } from "../components/ui/spotlight";
 import { StarsBackground } from "../components/ui/star-back";
 import SemiButton from "../components/ui/semibutton";
-import Image from "next/image";
+import { BlurImage } from "../components/ui/featured";
 
 export function HeroPage() {
   return (
@@ -22,7 +22,7 @@ export function HeroPage() {
         <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           The Next Gen Coding Agent
         </p>
-        <Image
+        <BlurImage
           src="https://i.postimg.cc/GmDPBMBm/syntheo-quadropiccomtrailer-image.webp"
           alt="Sytheo Trailer for Web"
           width="500"

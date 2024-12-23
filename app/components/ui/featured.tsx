@@ -261,17 +261,17 @@ export const Card = ({
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black  rounded-full flex items-center justify-center"
                 onClick={handleClose}
               >
-                <FaCircleXmark className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <FaCircleXmark className="h-6 w-6 text-neutral-900" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-base font-medium text-white"
               >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+                className="text-2xl md:text-5xl font-semibold mt-4 text-white"
               >
                 {card.title}
               </motion.p>
@@ -285,9 +285,9 @@ export const Card = ({
         onClick={handleOpen}
         onMouseEnter={() => onCardHover(index)}
         onTouchStart={() => onCardTouch(index)}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[30rem] lg:h-[32rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-neutral-900 h-80 w-56 md:h-[30rem] lg:h-[32rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        {/* Base red background */}
+        {/* Base Star background */}
         <StarsBackground />
 
         {/* Image layer */}

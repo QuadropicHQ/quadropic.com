@@ -12,7 +12,7 @@ import Contact from "./pages/contact";
 export default function Home() {
   return (
     <>
-      <Popup />
+      {/* <Popup /> */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>

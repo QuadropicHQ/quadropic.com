@@ -104,10 +104,10 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <span className="text-sm leading-[1.6] text-neutral-200 font-normal">
-                    {item.name}
+                    Excels at {item.title}
                   </span>
                   <span className="text-sm leading-[1.6] text-neutral-200 font-normal">
-                    {item.title}
+                    Thanks to {item.name}
                   </span>
                 </span>
               </div>

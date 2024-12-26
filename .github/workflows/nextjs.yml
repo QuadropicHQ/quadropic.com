@@ -99,11 +99,31 @@ jobs:
 
   # Run Performance Analytics
   perf:
+    needs: deploy  # This ensures Lighthouse runs after deployment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Generate Lighthouse Report
-        uses: justinribeiro/lighthouse-action@master
+      - uses: actions/checkout@v4
+      - name: Wait for deployment
+        run: sleep 30  # Give deployment time to complete
+      - name: Run Lighthouse CI
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v10
         with:
-          url: https://quadropic.com
-          wptConnectionSpeed: threegfast
+          urls: |
+            ${{ needs.deploy.outputs.url }}  # Use the deployed URL
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: '.github/lighthouse/config.json'
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v3
+        with:
+          body: |
+            🚦 Lighthouse Report - $(date -u +'%Y-%m-%d %H:%M:%S UTC')
+            
+            Performance: ${{ steps.lighthouse.outputs.performance }}
+            Accessibility: ${{ steps.lighthouse.outputs.accessibility }}
+            Best Practices: ${{ steps.lighthouse.outputs.best-practices }}
+            SEO: ${{ steps.lighthouse.outputs.seo }}
+            PWA: ${{ steps.lighthouse.outputs.pwa }}
+            
+            [📊 View Full Report](${{ steps.lighthouse.outputs.links }})

@@ -23,7 +23,7 @@ export function HeroPage() {
           The Next Gen Coding Agent
         </p>
         <BlurImage
-          src="https://i.postimg.cc/GmDPBMBm/syntheo-quadropiccomtrailer-image.webp"
+          src="https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/syntheo-quadropiccomtrailer-image.webp"
           alt="Sytheo Trailer for Web"
           width="500"
           height="300"

@@ -44,37 +44,37 @@ const data = [
   {
     category: "Quickly overview the Code base",
     title: "RepoVision",
-    src: "https://i.postimg.cc/ZK2F5k5Q/Repo-Vision.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/RepoVision.webp",
     content: <DummyContent />,
   },
   {
     category: "Make Fast Ship Fast",
     title: "Fast & Ready",
-    src: "https://i.postimg.cc/j5c4xLD6/Fast.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/Fast.webp",
     content: <DummyContent />,
   },
   {
     title: "Hybrid Cloud",
     category: "Power of the cloud, with Local Flexibility",
-    src: "https://i.postimg.cc/3rLFz05Y/Hybrid-Cloud.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/HybridCloud.webp",
     content: <DummyContent />,
   },
   {
     title: "Fix Bugs",
     category: "Find & Fix Bugs in a moment",
-    src: "https://i.postimg.cc/j2k6fmQL/FixBugs.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/FixBugs.webp",
     content: <DummyContent />,
   },
   {
     title: "Make Apps",
     category: "Make Apps or add features, in a snap",
-    src: "https://i.postimg.cc/HnL4VdMq/MakeApps.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/MakeApps.webp",
     content: <DummyContent />,
   },
   {
     category: "Made using the trusted LLM Providers",
     title: "Powered by LLM",
-    src: "https://i.postimg.cc/sDv4zfsS/LLM.webp",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/LLM.webp",
     content: <DummyContent />,
   },
 ];

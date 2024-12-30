@@ -4,7 +4,7 @@ import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/fire
 import React from 'react';
 import { useState } from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { db } from '../firebase';
+import { db } from '../utils/firebase';
 
 const inquiryTypes = [
     'Investment',

@@ -75,6 +75,12 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+# Package files
+package-lock.json
+
+# MacOS directory attributes
+.DS_Store
+
 # dotenv environment variable files
 .env
 .env.development.local

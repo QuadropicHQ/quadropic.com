@@ -6,7 +6,6 @@ import { Footer } from "./components/inhome/footer";
 import { ValuePage } from "./pages/values";
 import Head from "next/head";
 import { GServices } from "./pages/gservices";
-import Popup from "./components/inhome/popups/temporary-popup";
 import Contact from "./pages/contact";
 
 export default function Home() {

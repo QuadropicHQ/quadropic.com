@@ -70,9 +70,6 @@ jobs:
           NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ${{ vars.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
-      - name: Static HTML export with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
-
       - name: Remove Jekyll Configurations by Adding .nojekyll to Out
         run: touch ./out/.nojekyll
 

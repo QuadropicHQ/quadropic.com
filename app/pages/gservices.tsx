@@ -48,6 +48,12 @@ const data = [
     content: <DummyContent />,
   },
   {
+    category: "Engine that Reasons to Code",
+    title: "Markz CodeReason",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/CodeReason.png",
+    content: <DummyContent />,
+  },
+  {
     category: "Make Fast Ship Fast",
     title: "Fast & Ready",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/Fast.webp",

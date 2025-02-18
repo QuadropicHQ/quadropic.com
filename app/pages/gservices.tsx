@@ -34,6 +34,7 @@ const DummyContent = () => {
               <br />
               <br />
                 This section has not been implemented yet. Please check back later.
+                Our Content Team is working actively to fill this out
             </p>
           </div>
     </>
@@ -45,6 +46,12 @@ const data = [
     category: "Quickly overview the Code base",
     title: "RepoVision",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/RepoVision.webp",
+    content: <DummyContent />,
+  },
+  {
+    category: "Engine that Reasons to Code",
+    title: "Markz CodeReason",
+    src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/CodeReason.png",
     content: <DummyContent />,
   },
   {

@@ -11,21 +11,6 @@ export default function SemiButton({ children = "Coming Soon", className }: Semi
             </span>
             <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10">
             <span>{children}</span>
-            <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 24 24"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                d="M10.75 8.75L14.25 12L10.75 15.25"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                />
-            </svg>
             </div>
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 via-white/90 to-white/0 transition-opacity duration-500 group-hover:opacity-40" />
         </button>

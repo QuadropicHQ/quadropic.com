@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 import { Spotlight } from "../components/ui/spotlight";
 import { StarsBackground } from "../components/ui/star-back";
 import SemiButton from "../components/ui/semibutton";
-import { BlurImage } from "../components/ui/featured";
+import RankAnnouncement from "../components/ui/bestbadge";
 
 export function HeroPage() {
   return (
@@ -12,7 +14,10 @@ export function HeroPage() {
       fill="white"
       />
       <div className="p-4 max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-end h-full">
+      <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-4">
         <SemiButton className="my-4" />
+        <RankAnnouncement className="my-4"/>
+      </div>
         <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 animate-text-indent-x">
           Syntheo
         </h1>
@@ -22,11 +27,12 @@ export function HeroPage() {
         <p className="mt-4 font-normal text-2xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           The Next Gen Coding Agent
         </p>
-        <BlurImage
+        <Image
           src="https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/syntheo-quadropiccomtrailer-image.webp"
           alt="Sytheo Trailer for Web"
           width="500"
           height="300"
+          priority={true}
           className="w-[90%] sm:w-[100%] md:w-[85%] lg:w-[55%] h-auto mt-8 mx-auto"
         />
       </div>

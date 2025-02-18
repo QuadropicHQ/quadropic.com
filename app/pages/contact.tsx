@@ -179,6 +179,10 @@ export default function Contact() {
                                 <a href="talktous.quadropic.com" className="text-white/60 hover:text-white/80 transition-colors">talktous.quadropic.com</a>
                             </div>
                             <div>
+                                <h3 className="text-lg font-semibold text-white/80">Inside Quadropic</h3>
+                                <a href="https://insiders.quadropic.com/" className="text-white/60 hover:text-white/80 transition-colors">insiders.quadropic.com</a>
+                            </div>
+                            <div>
                                 <h3 className="text-lg font-semibold text-white/80">Connect With Us</h3>
                                 <div className="flex space-x-4 mt-3">
                                     <SocialIcon 

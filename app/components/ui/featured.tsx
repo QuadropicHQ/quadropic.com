@@ -23,7 +23,11 @@ type Card = {
   src: string;
   title: string;
   category: string;
-  content: React.ReactNode;
+  content: React.ReactNode; // Keep existing content
+  detailedDescription: string; // Add this line
+  keyFeatures: string[]; // Add this line
+  useCases: string[]; // Add this line
+  demoLink: string; // Add this line
 };
 
 export const CarouselContext = createContext<{
@@ -40,12 +44,9 @@ export const CarouselContext = createContext<{
   navigateToIndex: () => {},
 });
 
-const CarouselIndicator = ({
+const CarouselIndicator: React.FC<{ length: number; activeIndex: number }> = ({
   length,
   activeIndex,
-}: {
-  length: number;
-  activeIndex: number;
 }) => {
   const { navigateToIndex } = useContext(CarouselContext);
 
@@ -66,7 +67,10 @@ const CarouselIndicator = ({
   );
 };
 
-export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+export const Carousel: React.FC<CarouselProps> = ({
+  items,
+  initialScroll = 0,
+}) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -186,14 +190,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   );
 };
 
-export const Card = ({
+export const Card: React.FC<{ card: Card; index: number; layout?: boolean }> = ({
   card,
   index,
   layout = false,
-}: {
-  card: Card;
-  index: number;
-  layout?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -265,6 +265,52 @@ export const Card = ({
                 {card.title}
               </motion.p>
               <div className="py-10">{card.content}</div>
+              {card.detailedDescription && (
+                <div className="mt-6">
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    Details
+                  </h4>
+                  <p className="text-neutral-400 text-base">
+                    {card.detailedDescription}
+                  </p>
+                </div>
+              )}
+              {card.keyFeatures && card.keyFeatures.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    Key Features
+                  </h4>
+                  <ul className="list-disc list-inside text-neutral-400 text-base">
+                    {card.keyFeatures.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {card.useCases && card.useCases.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    Use Cases
+                  </h4>
+                  <ul className="list-disc list-inside text-neutral-400 text-base">
+                    {card.useCases.map((useCase, index) => (
+                      <li key={index}>{useCase}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {card.demoLink && card.demoLink !== "#" && (
+                <div className="mt-6 text-center">
+                  <a
+                    href={card.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full transition duration-300"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              )}
             </motion.div>
           </div>
         )}
@@ -281,15 +327,15 @@ export const Card = ({
 
         {/* Image layer */}
         <div className="w-full h-full">
-        <div className="absolute inset-0 z-20 aspect-square p-10 lg:p-[80px] md:p-[80px]">
-          <BlurImage
-            src={card.src}
-            alt={card.title}
-            width={30}
-            height={30}
-            className="object-cover w-full h-full"
-          />
-        </div>
+          <div className="absolute inset-0 z-20 aspect-square p-10 lg:p-[80px] md:p-[80px]">
+            <BlurImage
+              src={card.src}
+              alt={card.title}
+              width={30}
+              height={30}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
         {/* Content */}
         <div className="relative z-40 p-8">
@@ -311,14 +357,14 @@ export const Card = ({
   );
 };
 
-export const BlurImage = ({
+export const BlurImage: React.FC<ImageProps> = ({
   height,
   width,
   src,
   className,
   alt,
   ...rest
-}: ImageProps) => {
+}) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <Image

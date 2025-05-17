@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Carousel, Card } from "../components/ui/featured";
+import { Carousel, Card } from "../components/ui/featured"
 import { TextGenerateEffect } from "../components/ui/typingtext";
 
 // Define the detailed content components for each feature card
@@ -166,41 +166,139 @@ const data = [
     title: "RepoVision",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/RepoVision.webp",
     content: <RepoVisionContent />,
+    detailedDescription: "RepoVision provides a comprehensive overview of your codebase, allowing you to quickly understand its structure, dependencies, and key components. Navigate through files and directories with ease, visualize relationships between different parts of your project, and gain insights into the overall architecture. It's like having an x-ray vision into your repository, helping you onboard new team members faster and making complex projects more manageable.",
+    keyFeatures: [
+        "Interactive file tree visualization",
+        "Dependency mapping",
+        "Code structure analysis",
+        "Quick navigation"
+    ],
+    useCases: [
+        "Onboarding new developers",
+        "Understanding legacy code",
+        "Refactoring projects",
+        "Codebase audits"
+    ],
+    demoLink: "#",
   },
   {
     category: "Engine that Reasons to Code",
     title: "CodeReason",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/CodeReason.png",
     content: <CodeReasonContent />,
+    detailedDescription: "CodeReason is an AI-powered engine that understands and reasons about code. It can analyze code snippets, explain complex logic, identify potential issues, and even suggest improvements. Think of it as a co-pilot that helps developers write better code faster. It leverages advanced machine learning techniques to comprehend the nuances of various programming languages and provide intelligent insights.",
+    keyFeatures: [
+        "Code analysis and explanation",
+        "Intelligent code suggestions",
+        "Bug detection and identification",
+        "Support for multiple programming languages"
+    ],
+    useCases: [
+        "Code reviews and quality assurance",
+        "Learning new programming languages",
+        "Debugging and troubleshooting",
+        "Automated code documentation"
+    ],
+    demoLink: "#",
   },
   {
     category: "Make Fast Ship Fast",
     title: "Fast & Ready",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/Fast.webp",
     content: <FastReadyContent />,
+    detailedDescription: "Fast & Ready helps you accelerate your development and deployment process. It provides tools and workflows to quickly build, test, and ship your code. Reduce time-to-market and increase your team's productivity with streamlined pipelines and automated tasks. Focus on writing code, and let Fast & Ready handle the rest of the software delivery lifecycle.",
+    keyFeatures: [
+        "Automated build and test pipelines",
+        "Streamlined deployment workflows",
+        "Continuous integration and delivery",
+        "Accelerated time-to-market"
+    ],
+    useCases: [
+        "Rapid prototyping and iteration",
+        "Deploying microservices",
+        "Setting up CI/CD for new projects",
+        "Improving release frequency"
+    ],
+    demoLink: "#",
   },
   {
     title: "Hybrid Cloud",
     category: "Power of the cloud, with Local Flexibility",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/HybridCloud.webp",
     content: <HybridCloudContent />,
+    detailedDescription: "Hybrid Cloud combines the scalability and power of the cloud with the flexibility and control of local infrastructure. This allows organizations to leverage the best of both worlds, keeping sensitive data on-premises while utilizing cloud resources for demanding workloads. Achieve greater agility, optimize costs, and meet specific regulatory requirements with a tailored hybrid cloud solution.",
+    keyFeatures: [
+        "Seamless integration of cloud and on-premises resources",
+        "Data locality and compliance",
+        "Scalability and cost optimization",
+        "Increased agility and flexibility"
+    ],
+    useCases: [
+        "Handling sensitive data",
+        "Meeting regulatory requirements",
+        "Leveraging existing IT infrastructure",
+        "Disaster recovery and business continuity"
+    ],
+    demoLink: "#",
   },
   {
     title: "Fix Bugs",
     category: "Find & Fix Bugs in a moment",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/FixBugs.webp",
     content: <FixBugsContent />,
+    detailedDescription: "Fix Bugs helps developers quickly identify and resolve issues in their code. It uses advanced analysis techniques to pinpoint the root cause of bugs and provides suggestions for fixes. Reduce debugging time and improve code quality with this powerful tool. It integrates with your development workflow to provide real-time feedback and accelerate the debugging process.",
+    keyFeatures: [
+        "Automated bug detection",
+        "Root cause analysis",
+        "Intelligent fix suggestions",
+        "Integration with development environments"
+    ],
+    useCases: [
+        "Debugging complex applications",
+        "Improving code quality",
+        "Reducing technical debt",
+        "Accelerating the development cycle"
+    ],
+    demoLink: "#",
   },
   {
     title: "Make Apps",
     category: "Make Apps or add features, in a snap",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/MakeApps.webp",
     content: <MakeAppsContent />,
+    detailedDescription: "Make Apps allows you to quickly build new applications or add features to existing ones. It provides tools and frameworks to accelerate the development process, from initial setup to deployment. Whether you're starting from scratch or enhancing an existing project, Make Apps helps you turn your ideas into reality faster and more efficiently.",
+    keyFeatures: [
+        "Rapid application scaffolding",
+        "Streamlined feature integration",
+        "Code generation and automation",
+        "Support for various platforms"
+    ],
+    useCases: [
+        "Building new applications quickly",
+        "Adding features to existing apps",
+        "Prototyping and experimentation",
+        "Accelerating development cycles"
+    ],
+    demoLink: "#",
   },
   {
     category: "Made using the trusted LLM Providers",
     title: "Powered by LLM",
     src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/LLM.webp",
     content: <PoweredByLLMContent />,
+    detailedDescription: "Powered by LLM leverages trusted Large Language Model providers to deliver intelligent and powerful features. By integrating with state-of-the-art LLMs, this service can perform complex tasks such as code analysis, content generation, and natural language processing. Benefit from the latest advancements in AI to enhance your workflows and unlock new capabilities.",
+    keyFeatures: [
+        "Integration with leading LLM providers",
+        "Advanced natural language processing",
+        "Code understanding and generation",
+        "Access to cutting-edge AI models"
+    ],
+    useCases: [
+        "Generating code from natural language descriptions",
+        "Summarizing technical documents",
+        "Building conversational interfaces",
+        "Analyzing and refactoring code with AI assistance"
+    ],
+    demoLink: "#",
   },
 ];

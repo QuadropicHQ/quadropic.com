@@ -140,6 +140,42 @@ const PoweredByLLMContent = () => {
   );
 };
 
+const ThreeDOperatorContent = () => {
+  const description = "Control 3D software like Blender with intuitive tools.";
+  const imageUrl = "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/3D-Operator.png";
+  return (
+    <div className="flex flex-col items-center justify-center text-neutral-400 text-base md:text-lg font-sans max-w-3xl mx-auto">
+       <Image
+        src={imageUrl}
+        alt="3D Operator Banner"
+        width={300} // Adjust width and height as needed
+        height={300}
+        objectFit="contain"
+        className="rounded-md mb-6"
+      />
+      <TextGenerateEffect words={description} />
+    </div>
+  );
+};
+
+const AdvancedResearchAnalysisContent = () => {
+  const description = "Analyze complex research data, including biomedical and physics images.";
+  const imageUrl = "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/bio-research.png";
+  return (
+    <div className="flex flex-col items-center justify-center text-neutral-400 text-base md:text-lg font-sans max-w-3xl mx-auto">
+       <Image
+        src={imageUrl}
+        alt="Advanced Research Analysis Banner"
+        width={300} // Adjust width and height as needed
+        height={300}
+        objectFit="contain"
+        className="rounded-md mb-6"
+      />
+      <TextGenerateEffect words={description} />
+    </div>
+  );
+};
+
 
 export function GServices() {
   const cards = data.map((card, index) => (
@@ -301,4 +337,24 @@ const data = [
     ],
     demoLink: "#",
   },
+  {
+  src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/3D-Operator.png",
+  title: "3D Operator",
+  category: "Creative Tools",
+  content: <ThreeDOperatorContent />,
+  detailedDescription: "Syntheo's 3D Operator feature allows seamless integration and control over popular 3D modeling and animation software such as Blender. Automate tasks, manage complex scenes, and enhance your 3D workflow with powerful scripting and AI assistance.",
+  keyFeatures: ["Blender integration", "Automated scene setup", "Scripting support", "AI-assisted modeling and animation"],
+  useCases: ["3D asset creation", "Animation production", "Architectural visualization", "Product design"],
+  demoLink: "#",
+},
+{
+  src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/bio-research.png",
+  title: "Advanced Research ",
+  category: "Scientific Tools",
+  content: <AdvancedResearchAnalysisContent />,
+  detailedDescription: "Syntheo provides advanced tools for analyzing scientific research data, including specialized support for biomedical images, physics simulations, and other complex datasets. Utilize powerful visualization and analytical capabilities to accelerate your discoveries.",
+  keyFeatures: ["Biomedical image analysis", "Physics data processing", "Advanced visualization", "Statistical analysis tools"],
+  useCases: ["Medical imaging research", "Particle physics data analysis", "Genomic data processing", "Materials science simulations"],
+  demoLink: "#",
+},
 ];

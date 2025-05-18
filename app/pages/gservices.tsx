@@ -142,7 +142,7 @@ const PoweredByLLMContent = () => {
 
 const ThreeDOperatorContent = () => {
   const description = "Control 3D software like Blender with intuitive tools.";
-  const imageUrl = "https://placehold.co/400";
+  const imageUrl = "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/3D-Operator.png";
   return (
     <div className="flex flex-col items-center justify-center text-neutral-400 text-base md:text-lg font-sans max-w-3xl mx-auto">
        <Image
@@ -160,7 +160,7 @@ const ThreeDOperatorContent = () => {
 
 const AdvancedResearchAnalysisContent = () => {
   const description = "Analyze complex research data, including biomedical and physics images.";
-  const imageUrl = "https://placehold.co/400";
+  const imageUrl = "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/bio-research.png";
   return (
     <div className="flex flex-col items-center justify-center text-neutral-400 text-base md:text-lg font-sans max-w-3xl mx-auto">
        <Image
@@ -338,7 +338,7 @@ const data = [
     demoLink: "#",
   },
   {
-  src: "https://placehold.co/400",
+  src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/3D-Operator.png",
   title: "3D Operator",
   category: "Creative Tools",
   content: <ThreeDOperatorContent />,
@@ -348,7 +348,7 @@ const data = [
   demoLink: "#",
 },
 {
-  src: "https://placehold.co/400",
+  src: "https://raw.githubusercontent.com/QuadropicHQ/web-assets/refs/heads/main/quadropicdotcom-images/bio-research.png",
   title: "Advanced Research ",
   category: "Scientific Tools",
   content: <AdvancedResearchAnalysisContent />,

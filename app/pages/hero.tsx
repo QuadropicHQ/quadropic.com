@@ -15,7 +15,7 @@ export function HeroPage() {
       />
       <div className="p-4 max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-end h-full">
       <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-4">
-        <SemiButton className="my-4" />
+        <SemiButton className="my-4" href="https://cal.com/quadropic" />
         <RankAnnouncement className="my-4"/>
       </div>
         <h1 className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 animate-text-indent-x">
